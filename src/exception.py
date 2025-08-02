@@ -2,6 +2,7 @@ import sys
 import logging
 import os
 import math
+from src.logger import logging
 
 def error_handler(error,error_detail:sys):
     _, _, exc_tb = error_detail.exc_info()
@@ -21,4 +22,4 @@ class CustomException(Exception):
      
 
         
-        
+ 
