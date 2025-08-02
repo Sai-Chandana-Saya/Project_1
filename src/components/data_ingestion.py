@@ -4,6 +4,7 @@ from src.logger import logging
 from src.exception import CustomException
 from src.components.data_transformation import DataTransformation, DataTransformationConfig
 from src.utils import save_object
+from src.components.model_trainer import ModelTrainer, ModelTrainerConfig
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
@@ -50,5 +51,26 @@ if __name__ == "__main__":
     logging.info("Data Ingestion completed")
 
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_transformation(train_data, test_data)
+    train_arr,test_arr,_ = data_transformation.initiate_data_transformation(train_data, test_data)
     logging.info("Data Transformation completed")
+
+    modeltrainer = ModelTrainer()
+    best_model,model_report = modeltrainer.initiate_model_trainer(train_arr, test_arr)
+    logging.info("Model Training completed")
+
+
+    # Save the model report
+    with open('artifacts/model_report.txt', 'w') as f:
+        # Write the complete model report
+        f.write("Model Evaluation Report:\n")
+        f.write("="*50 + "\n")
+        for model_name, metrics in model_report.items():
+            f.write(f"Model: {model_name}\n")
+            f.write(f"R2 Score: {metrics['r2_score']}\n")
+            f.write(f"MAE: {metrics['mean_absolute_error']}\n")
+            f.write(f"MSE: {metrics['mean_squared_error']}\n")
+            f.write("="*50 + "\n\n") 
+
+
+
+
