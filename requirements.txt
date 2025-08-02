@@ -4,4 +4,7 @@ scikit-learn
 seaborn
 matplotlib
 statsmodels
+catboost
+xgboost
+dill
 -e .
