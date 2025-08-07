@@ -33,15 +33,6 @@ We evaluated several regression models with the following metrics:
 
 **MSE**: Mean Squared Error (lower is better)
 
-
-
-## Key Findings
-**Best Performing Model:** Linear Regression achieved the highest R2 score (0.8804) and lowest errors
-
-**Tree-based Models:** Gradient Boosting and Random Forest performed nearly as well as Linear Regression
-
-**Weakest Performer**: K-Nearest Neighbors had significantly worse performance than other models
-
 ## Model Comparison
 
 | Model                      | R2 Score  | MAE     | MSE      |
@@ -53,4 +44,13 @@ We evaluated several regression models with the following metrics:
 | XGBRegressor               | 0.8231    | 5.0907  | 43.0490  |
 | DecisionTreeRegressor      | 0.7265    | 6.4450  | 66.5650  |
 | KNeighborsRegressor        | 0.4756    | 8.6910  | 127.6038 |
+
+
+## Key Findings
+**Best Performing Model:** Linear Regression achieved the highest R2 score (0.8804) and lowest errors
+
+**Tree-based Models:** Gradient Boosting and Random Forest performed nearly as well as Linear Regression
+
+**Weakest Performer**: K-Nearest Neighbors had significantly worse performance than other models
+
 
