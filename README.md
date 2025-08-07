@@ -33,15 +33,7 @@ We evaluated several regression models with the following metrics:
 
 **MSE**: Mean Squared Error (lower is better)
 
-## Model Comparison:
-**Model	                      R2 Score	    MAE	        MSE**
-LinearRegression	          0.8804	      4.2148	    29.0952
-GradientBoostingRegressor	  0.8727	      4.2862	    30.9735
-RandomForestRegressor	      0.8552	      4.5774	    35.2277
-CatBoostRegressor	          0.8524	      4.5722	    35.9275
-XGBRegressor	              0.8231	      5.0907	    43.0490
-DecisionTreeRegressor	      0.7265	      6.4450	    66.5650
-KNeighborsRegressor	        0.4756	      8.6910	    127.6038
+
 
 ## Key Findings
 **Best Performing Model:** Linear Regression achieved the highest R2 score (0.8804) and lowest errors
@@ -50,4 +42,15 @@ KNeighborsRegressor	        0.4756	      8.6910	    127.6038
 
 **Weakest Performer**: K-Nearest Neighbors had significantly worse performance than other models
 
+## Model Comparison
+
+| Model                      | R2 Score  | MAE     | MSE      |
+|----------------------------|-----------|---------|----------|
+| LinearRegression           | 0.8804    | 4.2148  | 29.0952  |
+| GradientBoostingRegressor  | 0.8727    | 4.2862  | 30.9735  |
+| RandomForestRegressor      | 0.8552    | 4.5774  | 35.2277  |
+| CatBoostRegressor          | 0.8524    | 4.5722  | 35.9275  |
+| XGBRegressor               | 0.8231    | 5.0907  | 43.0490  |
+| DecisionTreeRegressor      | 0.7265    | 6.4450  | 66.5650  |
+| KNeighborsRegressor        | 0.4756    | 8.6910  | 127.6038 |
 
