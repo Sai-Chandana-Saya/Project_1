@@ -1,4 +1,4 @@
-### Student Performance Analysis - Model Evaluation Report
+## Student Performance Analysis - Model Evaluation Report
 
 ## Overview
 This project analyzes student performance data using various machine learning regression models to predict academic scores. The analysis evaluates models based on math, reading, and writing scores in relation to demographic and educational factors.
